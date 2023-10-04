@@ -1,0 +1,196 @@
+/* The css selectors are organized alphabetically 
+with the classes and id selectors put at the end of their sections  */
+
+/* The default css selectors are for laptops */
+
+body {
+    width: 100%;
+    margin: 0px;
+    min-width: 100px;
+    background-color: #F26E00;
+}
+
+h1 {
+    font-size: 1.75rem;
+    font-family: 'Questrial', sans-serif;
+    color: #ffcca2;
+}
+
+header {
+    width: 100%;
+    background-color: #ffe0c7;
+    margin: auto;
+    text-align: center;
+}
+
+header nav {
+    display: block;
+    background-color: #974400;
+    padding: 1% 1%;
+    margin-top: 1%;
+}
+
+header nav a {
+    margin: 0% 4%;
+    color: white;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 300;
+    font-size: 1.25em;
+    text-decoration: none;
+}
+
+header #home-button {
+    text-decoration: none;
+    font-size: 4rem;
+    font-family: 'Questrial', sans-serif;
+    color: #F26E00;
+    display: block;
+}
+
+main {
+    display: grid;
+    gap: 0%;
+    max-width: 800px;
+    margin: auto;
+}
+
+main nav {
+    grid-row: 1 / 4;
+    grid-column: 1;
+    background-color: #C15800;
+    padding: 1% 10%;
+}
+
+main nav a {
+    display: block;
+    margin: 50% 0%;
+    font-size: 1em;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 500;
+    color: rgb(201, 201, 201);
+}
+
+main section {
+    grid-column: 2 / 3;
+}
+
+main #my-origins {
+    grid-row: 3 / 4;
+}
+
+main #my-purpose {
+    grid-row: 1 / 2;
+}
+
+main #test-me {
+    grid-row: 2 / 3;
+}
+
+p {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 400;
+    font-size: 0.9em;
+}
+
+section figure {
+    width: 30%;
+    height: 100%;
+    margin: 0% 2.5%;
+    float: right;
+    padding: 0px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+section figure img {
+    min-width: 0%;
+    width: 100%;
+}
+
+section .text {
+    width: 50%;
+    margin: 0% 2.5%;
+    float: left;
+}
+
+/* Media query for tablet screens */
+@media screen and (max-width: 992px) {
+
+    /* Moves the local nav bar on top of the items */
+    main nav {
+        grid-row: 1 ;
+        grid-column: 1;
+    }
+
+    /* Makes the local navbar items horizontal */
+    main nav a {
+        display: inline;
+        margin: 10% 5%;
+    }
+
+    /* Moves the columns of the sections underneath the navbar */
+    main section {
+        grid-column: 1;
+    }
+
+    main #my-origins {
+        grid-row: 4;
+    }
+    
+    main #my-purpose {
+        grid-row: 2;
+    }
+    
+    main #test-me {
+        grid-row: 3;
+    }
+}
+
+/* Media query for mobile screens */
+@media screen and (max-width: 576px) {
+    /* Some of the font sizes were shrinked to accomadate for the screens */
+    h1 {
+        font-size: 1.75em;
+    }
+
+    header nav a {
+        font-size: 0.95em;
+    }
+
+    main nav {
+        padding: 1% 5%;
+    }
+
+    main nav a {
+        font-size: 0.75em;
+    }
+
+    p {
+        font-size: 0.7em;
+    }
+
+    /* Moves the image to be underneath the text to save space */
+    section {
+        display: block;
+        overflow: hidden;
+        margin: 0% 5% 10%;
+    }
+    
+    section figure {
+        width: 100%;
+        height: auto;
+        margin: 0%;
+        padding: 0px;
+        overflow: hidden;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    section .text {
+        width: 100%;
+        margin: 0%;
+    }
+}
